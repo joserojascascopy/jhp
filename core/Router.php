@@ -47,6 +47,6 @@ class Router {
         include_once __DIR__ . "/../app/views/$views.php";
         $root = ob_get_clean();
 
-        include_once __DIR__ . "/../app/views/index.php";
+        include_once __DIR__ . "/../app/views/main.php";
     }
 }
