@@ -1,0 +1,19 @@
+{
+    "name": "joser/basemvc-php",
+    "autoload": {
+        "psr-4": {
+            "MVC\\": "./core",
+            "Controllers\\" : "./app/controllers",
+            "Models\\": "./app/models"
+        }
+    },
+    "authors": [
+        {
+            "name": "joserojascascopy",
+            "email": "joserojascascopy@hotmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
