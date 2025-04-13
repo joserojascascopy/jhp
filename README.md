@@ -90,10 +90,4 @@ Proximamente se agregarán ejemplos de pruebas.
 
 ---
 
-## 📄 Licencia
-
-Este proyecto está bajo la licencia MIT.
-
----
-
 ¡Listo para construir con PHP moderno y ligero!
