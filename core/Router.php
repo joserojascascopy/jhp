@@ -15,8 +15,7 @@ class Router {
     }
 
     public function handleRequest() {
-        $urlActual = rtrim($_SERVER['PATH_INFO'] ?? '/', '/');
-        $urlActual = $urlActual === '' ? '/' : $urlActual;
+        $currentUrl = strtok($_SERVER['REQUEST_URI'], '?') ?? '/';
         $method = $_SERVER['REQUEST_METHOD'];
 
         if (!in_array($method, ['GET', 'POST'])) {
@@ -26,15 +25,15 @@ class Router {
         }
 
         $funcion = match($method) {
-            'GET' => $this->rutasGET[$urlActual] ?? null,
-            'POST' => $this->rutasPOST[$urlActual] ?? null,
+            'GET' => $this->rutasGET[$currentUrl] ?? null,
+            'POST' => $this->rutasPOST[$currentUrl] ?? null,
         };
 
         if($funcion) {
             call_user_func($funcion, $this);
         }else {
             http_response_code(404);
-            echo "Error 404 - Página no encontrada: $urlActual";
+            echo "Error 404 - Page not found: $currentUrl";
         }
     }
 
