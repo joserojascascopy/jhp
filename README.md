@@ -38,7 +38,7 @@ jhp/
 1. **Clonar el repositorio:**
 
 ```bash
-git clone https://github.com/tuusuario/jhp.git
+git clone https://github.com/joserojascascopy/jhp.git
 cd jhp
 ```
 
