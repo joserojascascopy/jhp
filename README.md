@@ -7,17 +7,17 @@ JHP es un mini-framework en PHP puro con enfoque educativo y minimalista, ideal 
 ```
 jhp/
 ├── app/
+│   ├── assets/            # Archivos fuente: SCSS, JS
 │   ├── controllers/       # Controladores del sistema
 │   ├── helpers/           # Funciones auxiliares
 │   ├── models/            # Modelos de base de datos
-│   ├── views/             # Vistas del sistema
-│   ├── src/               # Archivos fuente: SCSS, JS
-│   └── routes/            # Rutas de la aplicación
+│   └── views/             # Vistas del sistema
 ├── config/                # Config global (base de datos, etc)
 ├── core/                  # Núcleo del framework (Router, etc)
 ├── public/                # Carpeta pública
 │   ├── assets/            # Archivos compilados (CSS, JS, imágenes)
 │   └── index.php          # Punto de entrada
+├──  routes/               # Rutas de la aplicación
 ├── .env.example           # Variables de entorno de ejemplo
 ├── .gitignore
 ├── composer.json
