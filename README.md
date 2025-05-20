@@ -17,7 +17,7 @@ jhp/
 ├── public/                # Carpeta pública
 │   ├── assets/            # Archivos compilados (CSS, JS, imágenes)
 │   └── index.php          # Punto de entrada
-├──  routes/               # Rutas de la aplicación
+├── routes/                # Rutas de la aplicación
 ├── .env.example           # Variables de entorno de ejemplo
 ├── .gitignore
 ├── composer.json
