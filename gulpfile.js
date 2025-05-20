@@ -3,7 +3,7 @@ const sass = require('gulp-sass')(require('sass'));
 const sourcemaps = require('gulp-sourcemaps');
 
 function css() {
-    return src('./app/src/scss/**/*.scss')
+    return src('./app/assets/scss/**/*.scss')
         .pipe(sourcemaps.init())
         .pipe(sass({ style: 'compressed' }).on('error', sass.logError))
         .pipe(sourcemaps.write('.'))
@@ -11,13 +11,13 @@ function css() {
 }
 
 function js() {
-    return src('./app/src/js/**/*.js')
+    return src('./app/assets/js/**/*.js')
         .pipe(dest('./public/assets/js'));
 }
 
 function watchArchivos() {
-    watch('./app/src/scss/**/*.scss', css);
-    watch('./app/src/js/**/*.js', js);
+    watch('./app/assets/scss/**/*.scss', css);
+    watch('./app/assets/js/**/*.js', js);
 }
 
 exports.default = parallel(css, js, watchArchivos);
